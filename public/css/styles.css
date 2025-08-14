@@ -1,0 +1,68 @@
+.firstCell{
+    width: 58%;
+    font-weight: 700;
+}
+.secondCell{
+    width: 7%;
+}
+.thirdCell{
+    width: 7%;
+}
+.fourthCell{
+    width: 23%;
+}
+.boardTitle{
+    text-decoration: none;
+    color: #105289 !important; 
+    font-size: 13.5px !important; 
+    font-weight: 600;
+}
+.boardTitle:hover{
+    text-decoration: underline;
+    color: #c90d0d !important;
+}
+.loginLink{
+    text-decoration: none;
+    color: #105289 !important; 
+    font-size: 12px !important; 
+    font-weight: 600;
+}
+.loginLink:hover{
+    text-decoration: underline;
+    color: #c90d0d !important;
+}
+.formLogin {
+    font-size: 12px;
+    color: #425067;
+    margin-right: 0.5rem !important;
+}
+.formForgotPassword {
+    text-decoration: none;
+    font-size: 12px;
+    color: #105289;
+    margin-right: 0.5rem !important;
+}
+.formForgotPassword:hover {
+    text-decoration: underline;
+    color: #c90d0d !important;
+}
+.formInput {
+    background-color: #f2f3f3;
+    border: 1px solid #B4BAC0;
+}
+.formInput:focus {
+    border-color: #008cff;
+    outline: none;
+}
+.loginButton {
+    background: linear-gradient(to bottom, #D2D2D2, #EFEFEF);
+    border: 1px solid #000000ff;
+    font-size: 12px;
+    color: #000000;
+    margin-right: 0.5rem !important;
+}
+.loginButton:hover {
+    background: linear-gradient(to bottom, #EFEFEF, #D2D2D2);
+    border: 1px solid #c90d0d;
+    color: #c90d0d;
+}

@@ -1,218 +1,53 @@
-<div class="mt-0 me-3 ms-3 mb-1 p-0 ps-1 pe-1 pb-2 rounded" style="background: linear-gradient(to bottom, #0e9ae0, #0179b5);">
-    <table class="table table-hover w-100 mb-0">
-        <thead>
-            <tr>
-                <th class="fw-bold w-25 font-s">Artificial Intelligence</th>
-                <th class="fw-bold w-25">Author</th>
-                <th class="fw-bold">Abstract</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="text-wrap text-break">Advancements in Artificial Intelligence</td>
-                <td class="text-wrap text-break">
-                    <?php
-                    $authors = ["John Smith", "Jane Doe"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td class="text-wrap text-break">An in-depth study on recent advancements in AI.</td>
-            </tr>
-        </tbody>
-    </table>
+<?php
+require __DIR__ . '/../model/forum/homeBoards.php';
+include __DIR__ . '/layout/board.php';
+?>
+<div class="mt-3 me-3 ms-3 mb-1">
+    <div class="d-flex ">
+        <a class="loginLink" href="#">LOGIN</a>
+        <svg class="mt-0" xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="currentColor"
+            class="bi bi-dot" viewBox="0 0 16 16">
+            <path d="M8 9.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3" />
+        </svg>
+        <a class="loginLink" href="#">REGISTER</a>
+    </div>
+    <hr class="border border-secondary-subtle opacity-50 m-0">
+    <form action="" method="get" class="d-flex mt-1">
+        <div class="formLogin">
+            <label for="name">Username: </label>
+            <input class="formInput" type="text" name="name" id="name" required />
+        </div>
+        <div class="formLogin">
+            <label for="password">Password: </label>
+            <input class="formInput" type="password" name="password" id="password" required />
+        </div>
+        <div class="d-flex align-items-center">
+            <a class="formForgotPassword" href="#">I forgot my password</a>
+        </div>
+        <div class="formLogin d-flex align-items-center">
+            <label for="rememberMe" class="mb-0">|&nbsp;&nbsp;Remember me</label>
+            <input type="checkbox" id="rememberMe" name="rememberMe" class="ms-2 me-1" />
+            
+        </div>
+        <input class="loginButton" type="submit" value="Login" />
+    </form>
 </div>
-<div class="mt-0 me-3 ms-3 mb-1 p-0 ps-1 pe-1 pb-2 rounded" style="background: linear-gradient(to bottom, #0e9ae0, #0179b5);">
-    <table class="table table-hover w-100 mb-0">
-        <thead>
-            <tr>
-                <th class="fw-bold w-25">Machine Learning</th>
-                <th class="fw-bold w-25">Author</th>
-                <th class="fw-bold">Abstract</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td class="text-wrap text-break">Data Science Applications in Healthcare</td>
-                <td class="text-wrap text-break">
-                    <?php
-                    $authors = ["Michael Brown", "Emily Davis", "David Harris"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td class="text-wrap text-break">Exploring the impact of data science in healthcare...</td>
-            </tr>
-            <tr>
-                <td class="text-wrap text-break">Machine Learning Algorithms for Big Data</td>
-                <td class="text-wrap text-break">
-                    <?php
-                    $authors = ["Sarah Martin", "James Lee"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td class="text-wrap text-break">A comprehensive review of ML algorithms for big da...</td>
-            </tr>
-            <tr>
-                <td class="text-wrap text-break">Big Data Challenges and Solutions</td>
-                <td class="text-wrap text-break">
-                    <?php
-                    $authors = ["Jane Doe", "Sarah Martin"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td class="text-wrap text-break">Addressing the challenges faced in big data and pr...</td>
-            </tr>
-            <tr>
-                <td class="text-wrap text-break">Bioinformatics: A New Era</td>
-                <td class="text-wrap text-break">
-                    <?php
-                    $authors = ["Linda Thomas", "Michael Brown"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td class="text-wrap text-break">The role of bioinformatics in modern biology.</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="mt-3 me-3 ms-3 mb-1">
+    <div style="color: #105289 !important; font-size: 12px !important; font-weight: 600;">
+        WHO IS ONLINE
+    </div>
+    <hr class="border border-secondary-subtle opacity-50 m-0">
+    <div class="text-muted" style="font-size: 0.77rem; line-height: 1.2;">
+        In total there are <b>0</b> users online :: <b>0</b> registered and <b>0</b> hidden (based on users active over the past 5 minutes)<br>
+        Most users ever online was <b>0</b> on Wed Jan 17, 2007 11:46 pm
+    </div>
 </div>
-<div class="mt-0 me-3 ms-3 mb-1 p-0 ps-1 pe-1 pb-2 rounded" style="background: linear-gradient(to bottom, #0e9ae0, #0179b5);">
-    <table class="table table-hover w-100 mb-0">
-        <thead>
-            <tr>
-                <th class="fw-bold w-25">Natural Language Processing</th>
-                <th class="fw-bold w-25">Author</th>
-                <th class="fw-bold">Abstract</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Natural Language Processing Techniques</td>
-                <td>
-                    <?php
-                    $authors = ["Amanda Wilson", "Robert Moore", "Linda Thomas"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td>A study on various NLP techniques and their applic...</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="mt-0 me-3 ms-3 mb-1 p-0 ps-1 pe-1 pb-2 rounded" style="background: linear-gradient(to bottom, #0e9ae0, #0179b5);">
-    <table class="table table-hover w-100 mb-0">
-        <thead>
-            <tr>
-                <th class="fw-bold w-25">Cyber Security</th>
-                <th class="fw-bold w-25">Author</th>
-                <th class="fw-bold">Abstract</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Cyber Security Trends in 2024</td>
-                <td>
-                    <?php
-                    $authors = ["John Smith", "David Harris"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td>An analysis of emerging trends in cyber security.</td>
-            </tr>
-            <tr>
-                <td>IoT Security Issues</td>
-                <td>
-                    <?php
-                    $authors = ["Emily Davis", "Robert Moore"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td>Investigating security issues in IoT and possible...</td>
-            </tr>
-        </tbody>
-    </table>
-</div>
-<div class="mt-0 me-3 ms-3 mb-1 p-0 ps-1 pe-1 pb-2 rounded" style="background: linear-gradient(to bottom, #0e9ae0, #0179b5);">
-    <table class="table table-hover w-100 mb-0">
-        <thead>
-            <tr>
-                <th class="fw-bold w-25">Cloud Computing</th>
-                <th class="fw-bold w-25">Author</th>
-                <th class="fw-bold">Abstract</th>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>Cloud Computing for Enterprises</td>
-                <td>
-                    <?php
-                    $authors = ["Amanda Wilson", "John Smith", "Linda Thomas", "Michael Brown"];
-                    $lastIndex = count($authors) - 1;
-                    foreach ($authors as $index => $author) {
-                        $urlAuthor = urlencode($author);
-                        echo "<a class='text-decoration-none' href='index.php?action=author&name=$urlAuthor'>$author</a>";
-                        if ($index !== $lastIndex) {
-                            echo ", ";
-                        }
-                    }
-                    ?>
-                </td>
-                <td>Benefits and challenges of cloud computing in ente...</td>
-            </tr>
-        </tbody>
-    </table>
+<div class="mt-3 me-3 ms-3 mb-1">
+    <div style="color: #105289 !important; font-size: 12px !important; font-weight: 600;">
+        STATISTICS
+    </div>
+    <hr class="border border-secondary-subtle opacity-50 m-0">
+    <div class="text-muted" style="font-size: 0.77rem; line-height: 1.2;">
+        Total posts <b>105874</b> • Total topics <b>3110</b> • Total members <b>693</b> • Our newest member <b>RingMeisterr</b>
+    </div>
 </div>

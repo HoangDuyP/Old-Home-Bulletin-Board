@@ -6,20 +6,18 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../public/css/styles.css">
     <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <style>
         table {
             border-collapse: collapse;
             width: 100%;
         }
-
         thead th {
 
             background-color: transparent !important;
             color: white !important;
-            font-weight: 400;
         }
-
         tbody td {
             border: 1px solid white !important;
             border-bottom: none !important;
@@ -28,14 +26,13 @@
         }
     </style>
 </head>
-
 <body>
-    <div class="d-flex vh-100 flex-column align-items-center" style="background-color: #f5f7fa;">
-        <div class="bg-white border rounded  mt-3" style="width: 65%;">
+    <div class="d-flex  flex-column align-items-center" style="background-color: #f5f7fa;">
+        <div class="bg-white border rounded mt-3 mb-3" style="width: 65%;">
             <!-- Header -->
             <?php include __DIR__ . '/layout/header.php'; ?>
             <!-- Content -->
-
+            <?php include __DIR__ . '/home.php'; ?>
             <!-- Footer -->
             <?php include __DIR__ . '/layout/footer.php'; ?>
         </div>
