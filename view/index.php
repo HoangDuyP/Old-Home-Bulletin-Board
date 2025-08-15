@@ -32,7 +32,33 @@
             <!-- Header -->
             <?php include __DIR__ . '/layout/header.php'; ?>
             <!-- Content -->
-            <?php include __DIR__ . '/home.php'; ?>
+             <?php
+            require_once '../controller/RegisterController.php';
+            require_once '../controller/IndexController.php';
+            require_once '../controller/LoginController.php';
+            require_once '../controller/AuthorController.php';
+            $action = $_REQUEST['action'] ?? 'home';
+
+            switch ($action) {
+                case 'register':
+                    $controller = new RegisterController();
+                    $controller->goToRegisterPage();
+                    break;
+                case 'login':
+                    $controller = new LoginController();
+                    $controller->goToLoginPage();
+                    break;
+                case 'author':
+                    $controller = new AuthorController();
+                    $controller->goToAuthorPage();
+                    break;
+                case 'home':
+                default:
+                    $controller = new IndexController();
+                    $controller->goToHomePage();
+                    break;
+            }
+            ?>
             <!-- Footer -->
             <?php include __DIR__ . '/layout/footer.php'; ?>
         </div>

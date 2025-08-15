@@ -36,6 +36,18 @@
     color: #425067;
     margin-right: 0.5rem !important;
 }
+.formRegister {
+    font-size: 12px;
+    font-weight: bold;
+    width: 15%;
+    color: #425067;
+    margin-right: 0.5rem !important;
+}
+.formTip {
+    line-height: normal;
+    font-size: 12px;
+    margin-bottom: 0;
+}
 .formForgotPassword {
     text-decoration: none;
     font-size: 12px;

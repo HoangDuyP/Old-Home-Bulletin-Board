@@ -1,4 +1,4 @@
-<div class="navbar navbar-expand-lg rounded mt-3 me-3 ms-3 mb-2 p-0 flex-column" style="background-color: #cadceb;">
+<div class="navbar navbar-expand-lg rounded mt-1 me-3 ms-3 mb-2 p-0 flex-column" style="background-color: #cadceb;">
     <div class="container-fluid">
         <a class="btn btn-link text-decoration-none fw-bold ps-0 pe-1 pt-2 pb-2" href="index.php?action=register"
             style="color: #105289; font-size: 12px;">

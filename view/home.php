@@ -12,7 +12,7 @@ include __DIR__ . '/layout/board.php';
         <a class="loginLink" href="#">REGISTER</a>
     </div>
     <hr class="border border-secondary-subtle opacity-50 m-0">
-    <form action="" method="get" class="d-flex mt-1">
+    <form action="" method="" class="d-flex mt-1">
         <div class="formLogin">
             <label for="name">Username: </label>
             <input class="formInput" type="text" name="name" id="name" required />
@@ -42,7 +42,7 @@ include __DIR__ . '/layout/board.php';
         Most users ever online was <b>0</b> on Wed Jan 17, 2007 11:46 pm
     </div>
 </div>
-<div class="mt-3 me-3 ms-3 mb-1">
+<div class="mt-3 me-3 ms-3 mb-3">
     <div style="color: #105289 !important; font-size: 12px !important; font-weight: 600;">
         STATISTICS
     </div>
